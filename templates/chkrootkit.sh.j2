@@ -1,0 +1,7 @@
+#!/bin/env bash
+#https://stackoverflow.com/questions/14656380/grepping-and-only-sending-e-mail-if-something-found
+
+( /usr/bin/chkrootkit ) | # Binary
+grep 'INFECTED|Vulnerable' | # Only get found issues
+/bin/mail -E -s 'CHROOTKIT Weekly Run ($HOSTNAME)' {{ email_address }} # Send EMail
+

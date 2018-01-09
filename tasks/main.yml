@@ -1,0 +1,12 @@
+---
+# tasks file for facv.chkrootkit
+
+- name: Installs chkrootkit
+  dnf:
+    name: chkrootkit
+    state: present
+
+- template:
+    src: chkrootkit.sh.j2
+    dest: /etc/cron.weekly/chkrootkit.sh
+    mode: 0744

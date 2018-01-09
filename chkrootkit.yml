@@ -1,0 +1,3 @@
+ - hosts: localhost
+   roles:
+      - { role: facv.chkrootkit, email_address: facu@localhost }

@@ -1,0 +1,4 @@
+---
+# defaults file for facv.chkrootkit
+chkrootkit_version: "0.52"
+email_address: "root@localhost"
